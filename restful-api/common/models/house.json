@@ -1,0 +1,40 @@
+{
+  "name": "House",
+  "plural": "houses",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "number": {
+      "type": "string",
+      "required": true
+    },
+    "features": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "vacant"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tenants": {
+      "type": "hasMany",
+      "model": "tenant",
+      "foreignKey": "tenants",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

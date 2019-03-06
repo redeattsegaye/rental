@@ -1,0 +1,41 @@
+{
+  "name": "tenant",
+  "plural": "tenants",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fullname": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "string",
+      "required": true,
+      "default": "male"
+    },
+    "SSN": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "registered_at": {
+      "type": "date",
+      "required": true
+    },
+    "registration_span": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
